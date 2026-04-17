@@ -6,7 +6,19 @@
 
 void addition()
 {
+	int a, b, c;
+	system("clear");
+	printf("insert first number: ");
+	scanf("%d", &a);
+	printf("\ninsert second number: ");
+	scanf("%d", &b);
 
+	c = a + b;
+
+	printf("\nResult: %d\n\n", c);
+	printf("Press any key to continue...");
+	getchar();
+	return;
 }
 
 
@@ -30,6 +42,12 @@ int main()
 		printf("\n0: Exit\n\n");
 		printf("select an option: ");
 		scanf("%d",&opt);
+
+		if(opt == 1)
+		{
+			addition();
+			getchar();
+		}
 	}
 
 	return 0;
