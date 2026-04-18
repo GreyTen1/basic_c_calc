@@ -4,8 +4,15 @@
 #include <stdlib.h>
 
 
-void addition()
+
+void interface(int opt)
 {
+	
+	if((opt != 1) && (opt != 2) && (opt != 3) && (opt != 4))
+	{
+		return;
+	}
+
 	int a, b, c;
 	system("clear");
 	printf("insert first number: ");
@@ -13,12 +20,34 @@ void addition()
 	printf("\ninsert second number: ");
 	scanf("%d", &b);
 
-	c = a + b;
+	switch(opt)
+	{
+		case 1:
+			c = a + b;
+			break;
+		
+		case 2:
+			c = a - b;
+			break;
+		
+		case 3:
+			c = a * b;
+			break;
+		
+		case 4:
+			c = a / b;
+			break;
+		
+		default:
+			break;
+
+	}
 
 	printf("\nResult: %d\n\n", c);
 	printf("Press any key to continue...");
 	getchar();
-	return;
+	getchar();
+
 }
 
 
@@ -42,12 +71,7 @@ int main()
 		printf("\n0: Exit\n\n");
 		printf("select an option: ");
 		scanf("%d",&opt);
-
-		if(opt == 1)
-		{
-			addition();
-			getchar();
-		}
+		interface(opt);
 	}
 
 	return 0;
