@@ -13,7 +13,7 @@ float addition(float a, float b)
 	return c;
 }
 
-float substraction(float a, float b)
+float subtraction(float a, float b)
 {
 	float c;
 
@@ -63,7 +63,7 @@ void interface(int opt)
 			break;
 		
 		case 2:
-			c = substraction( a , b );
+			c = subtraction( a , b );
 			break;
 		
 		case 3:
@@ -110,7 +110,7 @@ int main()
 		printf("######################################################\n");
 		printf("\n");
 		printf("1: Addition\n");
-		printf("2: Substraction\n");
+		printf("2: Subtraction\n");
 		printf("3: Multiplication\n");
 		printf("4: Division\n");
 		printf("\n0: Exit\n\n");
