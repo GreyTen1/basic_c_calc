@@ -78,8 +78,17 @@ void interface(int opt)
 			break;
 
 	}
+	
+	int c_int  = (int)c;
 
-	printf("\nResult: %f\n\n", c);
+	if((float)c_int != c)
+	{
+		printf("\nResult: %f\n\n", c);
+	}
+	else
+	{
+		printf("\nResult: %.0f\n\n", c);
+	}
 	printf("Press any key to continue...");
 	getchar();
 	getchar();
