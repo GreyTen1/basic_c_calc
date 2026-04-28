@@ -4,6 +4,42 @@
 #include <stdlib.h>
 
 
+float addition(float a, float b)
+{
+	float c;
+	
+	c = a + b;
+
+	return c;
+}
+
+float substraction(float a, float b)
+{
+	float c;
+
+	c = a - b;
+
+	return c;
+}
+
+float multiplication(float a, float b)
+{
+	float c;
+
+	c = a * b;
+
+	return c;
+}
+
+float division(float a, float b)
+{
+	float c;
+
+	c = a / b;
+
+	return c;
+}
+
 
 void interface(int opt)
 {
@@ -13,29 +49,29 @@ void interface(int opt)
 		return;
 	}
 
-	int a, b, c;
+	float a, b, c;
 	system("clear");
 	printf("insert first number: ");
-	scanf("%d", &a);
+	scanf("%f", &a);
 	printf("\ninsert second number: ");
-	scanf("%d", &b);
+	scanf("%f", &b);
 
 	switch(opt)
 	{
 		case 1:
-			c = a + b;
+			c = addition( a , b );
 			break;
 		
 		case 2:
-			c = a - b;
+			c = substraction( a , b );
 			break;
 		
 		case 3:
-			c = a * b;
+			c = multiplication( a , b );
 			break;
 		
 		case 4:
-			c = a / b;
+			c = division( a , b );
 			break;
 		
 		default:
@@ -43,7 +79,7 @@ void interface(int opt)
 
 	}
 
-	printf("\nResult: %d\n\n", c);
+	printf("\nResult: %f\n\n", c);
 	printf("Press any key to continue...");
 	getchar();
 	getchar();
