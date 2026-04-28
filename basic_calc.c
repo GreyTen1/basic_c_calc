@@ -81,7 +81,7 @@ void interface(int opt)
 	
 	int c_int  = (int)c;
 
-	if((float)c_int != c)
+	if((float)c_int != c) // in this case im making sure that the number is displayed correctly by truncating c and comparing it again to itself
 	{
 		printf("\nResult: %f\n\n", c);
 	}
